@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
 <head>
+{% if EXTRA_HEADER %}
+    {{ EXTRA_HEADER }}
+{% endif %}
         {% block head %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta charset="utf-8" />
