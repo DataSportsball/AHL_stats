@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("div.inner_cell:contains('# <!-- collapse=True -->')").prepend('<span style="font-weight: bold;">[+] Expand Code</span>')
+    $("div.inner_cell:contains('# <!-- collapse=False -->')").prepend('<span style="font-weight: bold;">[-] Collapse Code</span>')
+
+    $("div.inner_cell:contains('# <!-- collapse')").click(function () {
+    $header = $(this).children("span").first();
+    $codearea = $(this).children(".input_area");
+    console.log($(this).children());
+    $codearea.slideToggle(500, function () {
+        $header.text(function () {
+            return $codearea.is(":visible") ? "[-] Collapse Code" : "[+] Expand Code";
+        });
+    });
+    });
+    $("div.inner_cell:contains('# <!-- collapse=True -->')").find(".input_area").hide()
+
+});
+</script>
+
+        <meta charset="utf-8" />
+        <title>Adventures in sportsball data - pages</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Adventures in sportsball data </a></h1>
+                <nav><ul>
+                    <li><a href="/category/bar.html">bar</a></li>
+                    <li><a href="/category/cat1.html">cat1</a></li>
+                    <li><a href="/category/content.html">content</a></li>
+                    <li><a href="/category/foobar-foobaz.html">foo/bar, foo/baz</a></li>
+                    <li class="active"><a href="/category/pages.html">pages</a></li>
+                    <li><a href="/category/posts.html">posts</a></li>
+                    <li><a href="/category/test.html">test</a></li>
+                    <li><a href="/category/test_data.html">test_data</a></li>
+                    <li><a href="/category/yeah.html">yeah</a></li>
+                    <li><a href="/category/zhi-dao-shu.html">指導書</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/override/">Override url/save_as</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2012-12-07T00:00:00+11:00">
+                Published: Fri 07 December 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/aimz-vdr.html">Aimz VDR</a>
+        </address>
+<p>In <a href="/category/pages.html">pages</a>.</p>
+
+</footer><!-- /.post-info --><p>Test page which overrides save_as and url so that this page will be generated
+at a custom location.</p>
+                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
